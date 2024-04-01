@@ -42,6 +42,7 @@
       1. show_ksw()
       2. show_ajw()
       3. -> templates에 context 전달
+      4. 정보를 하나로 묶고, 거기에서 꺼내오자
    2. templates/MOOD/
       1. ~~ksw.html~~
          1. title: MOOD - ksw
