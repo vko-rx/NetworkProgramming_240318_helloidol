@@ -41,14 +41,17 @@
    1. views
       1. show_ksw()
       2. show_ajw()
+      3. -> templates에 context 전달
    2. templates/MOOD/
-      1. ksw.html
+      1. ~~ksw.html~~
          1. title: MOOD - ksw
          2. h1: MOOD
          3. h2: 강신우
          4. img: 강신우 프로필 사진
             1. border_radius: 50%;
-      2. ajy.html
+      2. ~~ajy.html~~
+      3. member.html
+         1. group_name, name, img_src
    3. urls
       1. MOOD/ -> ksw -> show_ksw()
       2. MOOD/ -> ajy -> show_ajy()
