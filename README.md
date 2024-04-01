@@ -39,10 +39,11 @@
       1. 'MOOD', in INSTALLED_APPS
 6. MOOD/
    1. views
-      1. show_ksw()
-      2. show_ajw()
+      1. ~~show_ksw()~~
+      2. ~~show_ajw()~~
       3. -> templates에 context 전달
       4. 정보를 하나로 묶고, 거기에서 꺼내오자
+      5. show_member()
    2. templates/MOOD/
       1. ~~ksw.html~~
          1. title: MOOD - ksw
@@ -54,8 +55,9 @@
       3. member.html
          1. group_name, name, img_src
    3. urls
-      1. MOOD/ -> ksw -> show_ksw()
-      2. MOOD/ -> ajy -> show_ajy()
+      1. ~~MOOD/ -> ksw -> show_ksw()~~
+      2. ~~MOOD/ -> ajy -> show_ajy()~~
+      3. `MOOD/ -> <member>/ -> show_member(member)`
 
 
 
