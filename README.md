@@ -44,6 +44,8 @@
       3. -> templates에 context 전달
       4. 정보를 하나로 묶고, 거기에서 꺼내오자
       5. show_member()
+      6. image link -> image file(static)
+      7. show_memberlist()
    2. templates/MOOD/
       1. ~~ksw.html~~
          1. title: MOOD - ksw
@@ -54,10 +56,17 @@
       2. ~~ajy.html~~
       3. member.html
          1. group_name, name, img_src
-   3. urls
-      1. ~~MOOD/ -> ksw -> show_ksw()~~
-      2. ~~MOOD/ -> ajy -> show_ajy()~~
-      3. `MOOD/ -> <member>/ -> show_member(member)`
+         2. {% load static %} <img src="{% static img_src %}">
+      4. memberlist.html
+         1. {% url '앱이름:path이름' %}
+         2. {% url '앱이름:path이름' 변수=값 %}
+            3. urls
+               1. ~~MOOD/ -> ksw -> show_ksw()~~
+               2. ~~MOOD/ -> ajy -> show_ajy()~~
+               3. `MOOD/ -> <member>/ -> show_member(member)`
+               4. MOOD/ -> memberlist/ -> show_memberlist()
+            4. static/MOOD/images/ 
+               1. 김유섭.jpg, 안진영.jpg, 강신우.jpg
 
 
 

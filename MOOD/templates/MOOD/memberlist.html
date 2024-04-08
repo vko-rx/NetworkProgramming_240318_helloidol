@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %} MOOD - 멤버리스트 {% endblock %}
+
+{% block content %}
+<h1>{{ members.0.group_name }} - 멤버리스트</h1>
+<table class = "table">
+    <tr>
+        <th>Name</th>
+        <th>Profile</th>
+    </tr>
+    {# members에서 하나씩 꺼내어 member에 넣자 #}
+    {% for member in members %}
+    <tr>
+        {# 멤버 이름에 링크 : mrsgreenapple/{{member.name}}/ #}
+        <td><a href="/MOOD/{{ member.name }}">{{ member.name }}</a></td>
+        {% load static %}
+        <td><img src="{% static member.img_src %}" alt="" style="height: 100px; border-radius: 50%"></td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

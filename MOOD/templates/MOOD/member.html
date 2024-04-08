@@ -1,12 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>{{ group_name }} - {{ name }}</title>
-</head>
-<body>
+{% extends 'base.html' %}
+
+{% block title %}{{ group_name }} - {{ name }}{% endblock %}
+
+{% block content %}
+    <a href="{% url 'MOOD:memberlist' %}">💗멤버리스트💗</a>
     <h1>{{ group_name }}</h1>
     <h2>{{ name }}</h2>
-    <img src="{{ img_src }}" style="border-radius: 50%;">
-</body>
-</html>
+    {% load static %}
+    <img src="{% static img_src %}" alt="" style="border-radius: 50%">
+{% endblock %}
